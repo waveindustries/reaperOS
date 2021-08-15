@@ -3,7 +3,7 @@
         <!--            
            
                                REAPER OS 
-                             ioxwave.com            
+                             ioxwave.com             
                        
         -->            
 
@@ -19,7 +19,7 @@
         <meta charset="UTF-8"> 
         
         <title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
-        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+        {block:Description}<meta name="Description" content="{MetaDescription}">{/block:Description}
         
         
         <link rel="shortcut icon" href="{Favicon}">
@@ -1269,7 +1269,7 @@ border:1px solid rgba(255,255,255,0.4); padding-bottom:13px;padding-top:13px;
     border-radius: 14px;
 }
     .statushs { display:block; width:374px; height:10px; text-align:right; position:fixed; margin-top:-20px;}
-         .widget4 {width:374px; height:6px;  border-radius:15px; align:left; margin-top:32px; color:white;-webkit-backdrop-filter: blur(6px);  backdrop-filter: blur(6px); background:green; opacity:100%;
+         .widget4 {width:374px; height:6px;  border-radius:15px; align:left; margin-top:32px; color:white;-webkit-backdrop-filter: blur(6px);  backdrop-filter: blur(6px); background:rgba(0,0,0,0.3); opacity:100%;
     background-size: 150% 150%;  box-shadow: 0px 1px 10px 1px rgb(0,0,0,30%);
 border:1px solid rgba(255,255,255,0.4); padding-bottom:13px;
     -webkit-animation: grey 40s ease infinite;margin-left:-1px;
@@ -1280,10 +1280,10 @@ border:1px solid rgba(255,255,255,0.4); padding-bottom:13px;
             width:6px; 
             height:16px;  
             border-radius:15px; 
-            align:left;  
+          
             color:white; 
             margin-top:-10px;
-            background:white; 
+            background:black; 
             opacity:100%; 
             
             background-size: 150% 150%;  
@@ -1302,7 +1302,7 @@ border:1px solid rgba(255,255,255,0.4); padding-bottom:13px;
 .widget4:hover {
     
    /* background:#c9c5c5; *//*offline grey*/
-     background:green; /*offline grey*/
+     background:rgba(0,0,0,0.3); /*offline grey*/
     width:374px; height:6px;  border-radius:15px; align:left; margin-top:13px; color:white; margin-top:32px; opacity:100%;
     background-size: 150% 150%;  box-shadow: 0px 1px 10px 1px rgb(0,0,0,30%);
 border:1px solid rgba(255,255,255,0.4); padding-bottom:13px;padding-top:13px;
@@ -7845,7 +7845,12 @@ id="youtube-audio">
                <div id="widget4" class="widget4">
          
          <div id="widget4online" class="widget4online">
-         <div class="textsm"> <a>Online : Editing</a>
+         
+         
+         
+         <div class="textsm"> {block:Description}
+            <a id="Description">{Description}</a>
+        {/block:Description}
 </div></div></div>
  
                <div id="statushs" class="statushs"><a href="https://github.com/waveindustries/reaperOS/blob/main/statushs">Previous</a></div>
