@@ -245,7 +245,7 @@
 
 }
         
-        .hello { display:block; width:100%; height:100%; background:black; margin: 0 auto; top:0; left: 0;      opacity: 1.0; background-image: url('{image:Wallpaper}'); position:fixed; z-index:-90000;
+        .hello { display:block; width:100%; height:100%; background:black; margin: 0 auto; top:0; left: 0;      opacity: 1.0; background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(3,3,15,1) 35%, rgba(5,21,30,1) 100%); margin-top:-17px; position:fixed; z-index:-90000; padding-bottom:17px;
     pointer-events:none;  -webkit-filter: saturate(1.2);
     filter: saturate(1.2);
       -}
@@ -306,16 +306,17 @@
  
     -webkit-backdrop-filter: blur(0px);
     float: left;
-  
-    
-    background:rgba(0,0,0,0.3);
-    margin-top: 1184px;}
+ margin-top:-17px;
+      /*background:rgba(200,210,210,0.97);*/
+   
+
+    }
         }
         
          .main:hover { 
             float: left; width:100%;  padding-left: 20px;
     margin-left: -20px; min-width:450px;
-       backdrop-filter: blur(0px);
+       backdrop-filter: blur(10px);
            border-top: solid 1px #87ebd6;
 
 
@@ -894,7 +895,7 @@ animation: movingbackground 5s ease infinite;
              
 			min-width: 456px;
 			max-width: 460px;
-			width:456px;
+			width:456px; background:transparent !important;
 			float: left; {text:Post Opacity});{/block:IfPostOpacity}
 		        border-left: solid 1px rgba(255,255,255,0.1);
 		            border-right: solid 1px rgba(255,255,255,0.1);
@@ -904,7 +905,7 @@ animation: movingbackground 5s ease infinite;
 			overflow: hidden; 
 			margin-bottom:15px;
 			background:rgba(0,0,0,0.5);
-			{block:IfRoundedCorners}border-radius: 15px;{/block:IfRoundedCorners}
+			{block:IfRoundedCorners}border-radius: 18px;{/block:IfRoundedCorners}
 			    -webkit-filter: saturate(1.2);
     filter: saturate(1.2);
 			transition:all ease-out 1s;
@@ -959,7 +960,7 @@ animation: movingbackground 5s ease infinite;
 			box-shadow: 0px 0px 1px 1px #87ebd6; 
 			overflow: hidden;
 			margin-bottom:15px;
-			{block:IfRoundedCorners}border-radius: 15px;{/block:IfRoundedCorners}
+			{block:IfRoundedCorners}border-radius: 18px;{/block:IfRoundedCorners}
 	/*	background-color: rgba({RGBcolor:PostsHover},1.0);    */  
 			
 			-webkit-transition: transform 300ms ease-in-out;
@@ -1440,7 +1441,7 @@ margin-top:11px;
         margin-top: -16px;
     
 
-           background: rgba(0,0,0,0.5);
+           background: rgba(0,0,0,0.3);
             z-index:99;
         line-height: 0%;
           box-shadow: 0 4px 10px -6px #FFFFFF;
@@ -4792,7 +4793,21 @@ transition: ease-out 4s;
     to   { transform: translate(0, -0px); }    
 }
 
-
+@-webkit-keyframes SILVERGREEN {
+    0%{background-position:0% 66%}
+    50%{background-position:100% 35%}
+    100%{background-position:0% 66%}
+}
+@-moz-keyframes SILVERGREEN {
+    0%{background-position:0% 66%}
+    50%{background-position:100% 35%}
+    100%{background-position:0% 66%}
+}
+@keyframes SILVERGREEN {
+    0%{background-position:0% 66%}
+    50%{background-position:100% 35%}
+    100%{background-position:0% 66%}
+}
 
 
    
@@ -4804,23 +4819,34 @@ transition: ease-out 4s;
 }
 
 @media screen and (min-width:100px) {
-.main {margin-left:-10px;  backdrop-filter: blur(3px);
+.main {margin-left:-10px;  backdrop-filter: blur(6px);
 border-top: solid 1px rgba(200,200,200,0.2);
            width:100%; min-width:450px;
-animation:ease-in 2s;
-transition:2s;
+animation:ease-in 2s;    
+    background:rgba(0,0,0,0.3);
+transition:2s; opacity:90%; margin-top: 1184px;
     box-shadow: 0 10px 65px 0px #000;
     -webkit-backdrop-filter: blur(3px);
     }
     
-    .main:hover {margin-left:-10px;  backdrop-filter: blur(3px);
+    
+     .hello { display:block; width:100%; height:100%; background:black; margin: 0 auto; top:0; left: 0;      opacity: 1.0; background-image: url('{image:Wallpaper}'); position:fixed; z-index:-90000;
+    pointer-events:none;  -webkit-filter: saturate(1.2);
+    filter: saturate(1.2);
+      -}
+    
+    .main:hover {margin-left:-10px;  backdrop-filter: blur(15px);
 border-top: solid 1px rgba(255,255,255,0.1);
-           width:100%; min-width:450px;
+           width:100%; min-width:450px; margin-top: 1184px;
            box-shadow: 0 5px 65px 0px  #000;
-         background:rgba(0,0,0,0.2);
-     animation:ease-in 2s;
-transition:2s; 
-    -webkit-backdrop-filter: blur(3px);
+         /*background:rgba(200,210,210,0.97);*/
+    /*   background: linear-gradient(266deg, #24ffc7, #f7def3, #07c5a5, #fbe7ff, #abffe6); */ 
+    background-size: 1000% 1000%;
+opacity:97%;
+    -webkit-animation: SILVERGREEN 10s ease infinite;
+    -moz-animation: SILVERGREEN 10s ease infinite;
+    animation: SILVERGREEN 10s ease infinite;
+    
     }
     
 
@@ -4829,7 +4855,7 @@ transition:2s;
     
     
     
-     .post { box-shadow: 0px 20px 65px 0px #000; background:transparent;}
+     .post { box-shadow: 0px 20px 65px 0px #000; }
     .icon-bar2 {display:none; } .icon-bar-mask {display:none;  } 
    .minibox {display:none; }
    .m_icon {display:none; }
@@ -4841,8 +4867,8 @@ transition:2s;
     
     .icon-bar {  
         display:block;
-       backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);}
+       backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);}
      .icon-bar:hover {  
         
        backdrop-filter: blur(10px);
